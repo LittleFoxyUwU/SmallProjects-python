@@ -28,7 +28,7 @@ def create_password(amount, length, have_digits, have_upcase, have_lowercase, ha
     for _ in range(amount):
         password = str()
         for _ in range(length):
-            password += chars[random.randint(0, len(chars))]
+            password += chars[random.randint(0, len(chars) - 1)]
         print(password)
 
     if input('Want to create more passwords? Input Yes to continue!').lower() in 'yes':
@@ -90,3 +90,4 @@ def password_rules_input():
 
 print("*****WELCOME TO PASSWORD GENERATOR")
 password_rules_input()
+input()
